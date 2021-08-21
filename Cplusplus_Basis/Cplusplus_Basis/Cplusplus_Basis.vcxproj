@@ -141,6 +141,11 @@
   <ItemGroup>
     <ClCompile Include="Cplusplus_Basis.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MySharedPtr.h" />
+    <ClInclude Include="MySingleton.h" />
+    <ClInclude Include="Sort.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

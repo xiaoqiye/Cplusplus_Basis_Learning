@@ -2,12 +2,37 @@
 //
 
 #include <iostream>
+#include "MySharedPtr.h"
+#include "Sort.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
     //可以检查编译系统对标准C库的支持情况
     std::cout << "Standard Clib: " << __STDC_HOSTED__ << std::endl;//Standard Clib: 1(指定编译器目标系统是否包含完整的C库)
+    
+    /*int N1 = 10;
+    int* Nptr1 = &N1;
+    CSharedPtr<int> SN1(Nptr1);
+    std::cout << SN1.getRefCount() << std::endl;
+
+    int N2 = 10;
+    int* Nptr2 = &N2;
+    CSharedPtr<int> SN2(Nptr2);
+    std::cout << SN2.getRefCount() << std::endl;
+
+    SN1 = SN2;
+    std::cout << SN2.getRefCount() << std::endl;*/
+
+    std::vector<int> Test = { 3,8,1,4,6,5,9,4 };
+    CSortAlgorithm* Sort = new CSortAlgorithm();
+    Sort->insertSortBasis(Test, 0);
+    Sort->printEachElement(Test);
+
+    Sort->insertSortBasis(Test, 1);
+    Sort->printEachElement(Test);
+
+    return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
